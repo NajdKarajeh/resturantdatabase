@@ -1,0 +1,30 @@
+﻿@model List<resturant.Models.Supplier>
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+<table class="table table-bordered">
+    <thead>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Phone</th>
+        <th>Number</th>
+        <th>Location</th>
+    </thead>
+    <tbody>
+        @foreach (var supplier in Model)
+        {
+           <tr>
+               <td>@supplier.SupplierId</td>
+               <td>@supplier.supplierName</td>
+               <td>@supplier.supplierPhone</td>
+               <td>@supplier.supplierNumber</td>
+               <td>@supplier.supplierLocation</td>
+           </tr>
+        }
+    </tbody>
+</table>
